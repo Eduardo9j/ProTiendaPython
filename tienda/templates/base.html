@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>
+         {%block titulo%}
+         {%endblock titulo%}
+    </title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="imagenes/icono.png" height="100px">
+             <a class="navbar-brand text-white" >
+                <img src="imagenes/icono.png" height="100px">  
+             </a>
+             <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button"
+                 <span class="navbar-toggler-icon"></span>
+                     
+             </button>
+             <div class="collapse navbar-collapse" id="menu"></div>
+                 <ul class="navbar.nav mr-auto">
+                     <li class="nav-item active">
+                         <a href="{% url 'about_view'%}">About</a></li>
+            <li><a href="{% url 'contacto_view'%}">Contacto</a></li>
+        </ul>
+    </nav>
+   
+</div>
+    {% block contenido%}
+    {% endblock %}
+</body>
+</html>

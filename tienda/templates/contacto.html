@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block contenido%}
+
+     
+        <h2>contactenos</h2>
+      
+    {% if enviado %}
+        {{c}}
+        {{a}}
+        {{t}}
+    
+    {% else %}      
+       <form action="" method="POST">
+        {% csrf_token%}
+        {{formulario.as_p}}
+        <input type="submit" value="Enviar">
+       </form>
+    {%endif %}
+{% endblock %}    
